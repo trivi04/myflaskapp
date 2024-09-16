@@ -1,22 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{{url_for("static",filename="styles.css")}}" />
-    <title>Document</title>
-</head>
-<body>
-    <h1>welcome to my app</h1> 
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto facilis accusantium, omnis est numquam, earum saepe expedita itaque, ea explicabo voluptatibus beatae! Eligendi dolorum consequuntur, sed optio repellendus ullam perferendis.</p>
-</body>
-</html>
-
-<!-- {% extends 'base.html' %}
+{% extends 'base.html' %}
 
 {% block head %}
 <title>CRUD ME</title>
 {% endblock %}
+
+
 
 {% block body %}
 <div class="content">
@@ -33,7 +21,7 @@
         {% for task in tasks %}
             <tr>
                 <td>{{ task.content }}</td>
-                <td>{{ task.date_created.strftime("%Y-%m-%d") }}</td>
+                <td>{{ task.created.strftime("%Y-%m-%d") }}</td>
                 <td>
                     <a href="/delete/{{task.id}}">Delete</a>
                     <br />
@@ -49,4 +37,4 @@
     </form>
 </div>
 </body>
-{% endblock %} -->
+{% endblock %}
